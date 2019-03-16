@@ -1,22 +1,22 @@
-<!DOCTYPE html>
 	<html>
 		<head>
 			<meta charset="utf-8">
-		<title>Гороскоп на сегодня</title>
+		<title>Гороскоп</title>
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<style type="text/css">
 div#main
 {
 width: 900px; 
-height: 850px;
-border: solid 1px black;
+height: 800px; 
+border: solid 1px black; 
 background-color: darkorchid;
 }
 div#content
 {
 float: right;
 margin-left: 500px;
-width: 450px;
-height: 400px;
+width: 450px; 
+height: 400px; 
 background-color: darkorchid;
 }
 
@@ -47,14 +47,7 @@ color: #ffba73;
 font-size: 24px;
 font-weight: bold;
 text-align: center;
-}
-h5
-{
-color: blue;
-font-size: 14px;
-font-weight: bold;
-text-align: center;
-}
+}		
 #kalendar
 		{
 		float: left;
@@ -63,7 +56,7 @@ text-align: center;
 		margin-top: -385px;
 		margin-left: 20px;
 		padding-left: 10px:
-
+		
 		}
 	div#pred1
 {
@@ -85,23 +78,18 @@ margin-left: 25px;
 }
 div#pred3
 {
-
 width: 367px;
 height: 75px;
 position: relative;
 background-color: #07a4f6;
 margin-left: 25px;
-			</style>
-<script
-			  src="http://code.jquery.com/jquery-3.3.1.min.js"
-			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			  crossorigin="anonymous"></script>
+}
+			</style>	
 	</head>
 	<body>
 		<div id="main">
 			<h1>Что день {{ date }} готовит<br><hr></h1>
-			<h2 id="helpers">ПРЕДСКАЗАНИЯ:</h2>
-			<h5>Жми на пресказание</h5>
+			<h2>ПРЕДСКАЗАНИЯ:</h2>
 				<div id="content">
 					<div id="third">
 						<h4>< Предсказание для знакомых: ><br>< Первому: ></h4>
@@ -124,7 +112,7 @@ margin-left: 25px;
 			</div>
 			<div id="kalendar">
 					<div id="first">
-						<h2><Предсказание для Вас: ></h3>
+						<h2><Предсказание для Вас: ></h2>
 						<div id="pred1">
 							<p>{{ predictions1 }}</p>
 						</div>
@@ -143,14 +131,5 @@ margin-left: 25px;
 					</div>
 			</div>
 		</div>
-		<script>
-			$("#helpers").click(function() {
-				console.log("1. Внутри анонимной функции")
-				p = $("#helpers");
-				p.html("Работает!")
-				p.css("color", "red")
-				console.log("2. После вызова стайлинга")
-			})
-		</script>
 	</body>
 </html>
