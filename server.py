@@ -31,7 +31,7 @@ def generate_predictions(total_num=5, num_sentences=3):
     return list(predictions)
 
 @route("/")
-@view("predictions2")
+@view("goroscop")
 def index():
   now = dt.now()
   predictions = generate_predictions()
@@ -40,6 +40,7 @@ def index():
   predictions3 = predictions[2]
   predictions4 = predictions[3]
   predictions5 = predictions[4]
+  predictions6 = predictions[5]
 
   return {
     "date": f"{now.year}-{now.month}-{now.day}",
@@ -48,6 +49,7 @@ def index():
     "predictions3": f"{predictions[2]}",
     "predictions4": f"{predictions[3]}",
     "predictions5": f"{predictions[4]}",
+    "predictions6": f"{predictions[5]}",
   }
 
 @route("/api/test")
