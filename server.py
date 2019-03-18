@@ -10,7 +10,7 @@ promises = ["гостей из забытого прошлого", "встреч
             "неожиданного праздника", "приятных перемен"]
 
 
-def generate_predictions(total_num=5, num_sentences=3):
+def generate_predictions(total_num=6, num_sentences=2):
     predictions = []
 
     for i in range(total_num):
@@ -32,8 +32,9 @@ def generate_predictions(total_num=5, num_sentences=3):
 
 @route("/")
 @view("goroscop")
+
 def index():
-  now = dt.now()
+
   predictions = generate_predictions()
   predictions1 = predictions[0]
   predictions2 = predictions[1]
@@ -41,9 +42,7 @@ def index():
   predictions4 = predictions[3]
   predictions5 = predictions[4]
   predictions6 = predictions[5]
-
   return {
-    "date": f"{now.year}-{now.month}-{now.day}",
     "predictions1": f"{predictions[0]}",
     "predictions2": f"{predictions[1]}",
     "predictions3": f"{predictions[2]}",
