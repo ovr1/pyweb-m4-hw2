@@ -1,6 +1,7 @@
 from bottle import route, run, view
 from datetime import datetime as dt
 from random import random
+import os
 
 import random
 
@@ -30,9 +31,9 @@ def generate_predictions(total_num=6, num_sentences=2):
 
     return list(predictions)
 
+cwd = os.getcwd() + os.sep + "view" + os.sep + "index.tpl"
 @route("/")
-@view("goroscop")
-
+@view(cwd)
 def index():
 
   predictions = generate_predictions()
