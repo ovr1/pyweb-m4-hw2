@@ -1,6 +1,9 @@
 {
   "name": "Start on Heroku: Python",
   "description": "A barebones Python app, which can easily be deployed to Heroku.",
+  "version": "1.0.0",
+  "engines": {
+    "node": "6.11.1",
   "image": "heroku/python",
   "repository": "https://github.com/ovr1/pyweb-m4-hw.git",
   "keywords": ["python", "bottle" ],
@@ -9,5 +12,6 @@
       "description": "Flag to tell the app we're running on cloud.",
       "value": "heroku"
     }
+}
   }
 }
