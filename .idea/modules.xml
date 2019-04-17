@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../pyweb-m4-hw2.1/.idea/pyweb-m4-hw2.iml" filepath="$PROJECT_DIR$/../pyweb-m4-hw2.1/.idea/pyweb-m4-hw2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pyweb-m4-hw2.iml" filepath="$PROJECT_DIR$/.idea/pyweb-m4-hw2.iml" />
     </modules>
   </component>
 </project>
