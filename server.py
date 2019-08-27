@@ -38,12 +38,7 @@ cwd = os.getcwd() + os.sep + "view" + os.sep + "index.tpl"
 def index():
 
   predictions = generate_predictions()
-  predictions1 = predictions[0]
-  predictions2 = predictions[1]
-  predictions3 = predictions[2]
-  predictions4 = predictions[3]
-  predictions5 = predictions[4]
-  predictions6 = predictions[5]
+
   return {
     "predictions1": f"{predictions[0]}",
     "predictions2": f"{predictions[1]}",
@@ -57,13 +52,9 @@ def index():
 def api_test():
     return {"test_passed": True}
 
-run(
-  host="localhost",
-  port=8080,
-  autoreload=True
-)
+
 if os.environ.get('APP_LOCATION') == 'heroku':
     run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 else:
-    run(host='localhost', port=8080, debug=True)
+    run(host='127.0.0.1', port=8080, debug=True)
 
