@@ -1,7 +1,9 @@
+import bottle
 from bottle import route, run, view
-from datetime import datetime as dt
+#from datetime import datetime as dt
 from random import random
 import os
+from paste import httpserver
 
 
 import random
@@ -52,9 +54,13 @@ def index():
 def api_test():
     return {"test_passed": True}
 
+run(
+  host="127.0.0.1",
+  port=8080,
+  autoreload=True
+)
 
-if os.environ.get('APP_LOCATION') == 'heroku':
-    run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
-else:
-    run(host='127.0.0.1', port=8080, debug=True)
+application = bottle.default_app()
+httpserver.serve(application, host='0.0.0.0', port=80)
+
 
