@@ -54,13 +54,9 @@ def index():
 def api_test():
     return {"test_passed": True}
 
-run(
-  host="127.0.0.1",
-  port=8080,
-  autoreload=True
-)
+
 
 application = bottle.default_app()
-httpserver.serve(application, host='0.0.0.0', port=80)
+httpserver.serve(application, host='0.0.0.0', port=8080)
 
 
